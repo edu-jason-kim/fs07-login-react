@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 import styles from "./Button.module.css";
 
 interface ButtonProps {
@@ -6,7 +6,7 @@ interface ButtonProps {
   className?: string;
   // 자식 요소를 받기위해 children 타입이 필수
   children: ReactNode;
-  onClick: any;
+  onClick: MouseEventHandler<HTMLButtonElement>;
 
   // 커스텀 속성 작성
   type?: "default" | "outlined";
